@@ -1,0 +1,73 @@
+ANGLE ID: shelf
+ATTACHED IMAGES: 9
+ASPECT RATIO: 9:16
+IS CLOSE-UP: false
+SCENE SOURCE: generated (plate view: null)
+ANGLE EVIDENCE: Input Image 1 + Input Image 5 + Input Image 7
+======================================================================
+
+      STUDIO MISSION: Generate a photorealistic, high-performance athletic commercial editorial featuring an Arabic athlete wearing the exact uploaded outfit.
+
+      ATHLETE IDENTITY & POSE (MANDATORY):
+      - MUST BE AN ARABIC ATHLETE: Authentic Middle Eastern / Arab athlete with handsome Arabic features, natural skin tone, and elite athletic physique.
+      - Pose & Scene Setting: <MODEL_DESCRIPTION — used only when no plate/background photo is supplied>
+
+      
+    INPUT SOURCE IMAGES:
+    Input Image 1: EXACT FOOTWEAR / SHOES ITEM TO WEAR — the FRONT view of this item (camera positioned to show the front). Same single physical item as the other views.
+    Input Image 2: EXACT FOOTWEAR / SHOES ITEM TO WEAR — the BACK view of this item (camera positioned to show the back). Same single physical item as the other views.
+    Input Image 3: EXACT FOOTWEAR / SHOES ITEM TO WEAR — the LEFT view of this item (camera positioned to show the left). Same single physical item as the other views.
+    Input Image 4: EXACT FOOTWEAR / SHOES ITEM TO WEAR — the RIGHT view of this item (camera positioned to show the right). Same single physical item as the other views.
+    Input Image 5: EXACT PANTS / BOTTOMS GARMENT TO WEAR — the FRONT view of this item (camera positioned to show the front). Same single physical item as the other views.
+    Input Image 6: EXACT PANTS / BOTTOMS GARMENT TO WEAR — the BACK view of this item (camera positioned to show the back). Same single physical item as the other views.
+    Input Image 7: EXACT TOP / SHIRT / JACKET GARMENT TO WEAR — the FRONT view of this item (camera positioned to show the front). Same single physical item as the other views.
+    Input Image 8: EXACT TOP / SHIRT / JACKET GARMENT TO WEAR — the BACK view of this item (camera positioned to show the back). Same single physical item as the other views.
+    Input Image 9: MANDATORY CUSTOM BACKGROUND / SCENE PHOTO
+
+    PRODUCT SHOT INTERPRETATION (APPLIES TO EVERY GARMENT REFERENCE):
+    - Garment references are typically FLAT-LAY, folded, ghost-mannequin or hanger product photographs: the item is unworn, pressed flat, sleeves splayed, with no body inside and no natural drape.
+    - Read these as FLAT TECHNICAL SPECIFICATIONS OF THE PRODUCT, not as the shape it should have when worn.
+    - COPY EXACTLY from the product shot: color and colorway, fabric type and weave, knit/rib texture, print or pattern and its scale, buttons, plackets, collar type, cuffs, hems, the trouser leg opening — its width, its construction and how it meets the shoe — pockets, seams, trims, and logo/branding position.
+    - RE-DERIVE naturally when worn: drape, folds, creases, stretch across the chest and shoulders, sleeve fall, and how fabric responds to the body's pose and gravity. The leg opening is NOT re-derived: it is copied.
+    - Do NOT reproduce flat-lay artifacts: no board-flat silhouette, no symmetric splayed sleeves, no floating garment, no packaging creases, and never leave the garment looking pasted on.
+    - Do NOT invent design elements that are absent from the product shot (extra stripes, logos, pockets, contrast panels). If a detail is not visible in the reference, keep that area plain and consistent with the visible material.
+    
+    MULTI-VIEW REFERENCE MANDATE (CRITICAL — READ BEFORE RENDERING):
+    - FOOTWEAR: Input Image 1 + Input Image 2 + Input Image 3 + Input Image 4 are MULTIPLE PHOTOGRAPHS OF ONE SINGLE PHYSICAL ITEM captured from different angles (e.g. side, top, sole, back, close-up). They are NOT separate products and MUST NOT be rendered as different garments.
+    - PANTS / BOTTOMS: Input Image 5 + Input Image 6 are MULTIPLE PHOTOGRAPHS OF ONE SINGLE PHYSICAL ITEM captured from different angles (e.g. side, top, sole, back, close-up). They are NOT separate products and MUST NOT be rendered as different garments.
+    - TOP / SHIRT / JACKET: Input Image 7 + Input Image 8 are MULTIPLE PHOTOGRAPHS OF ONE SINGLE PHYSICAL ITEM captured from different angles (e.g. side, top, sole, back, close-up). They are NOT separate products and MUST NOT be rendered as different garments.
+    - Merge every view of an item into ONE coherent three-dimensional understanding of that product: its true silhouette, proportions, colorway, materials, panelling, stitching, branding placement, and sole/hem geometry.
+    - When the athlete is rendered from an angle, reproduce the item AS IT ACTUALLY APPEARS from that angle according to whichever reference view shows it.
+    - For any angle not covered by a reference view, infer ONLY its geometry, continuing the shapes, materials and colours the supplied views establish. Never invent designs, logos, text, patterns, pockets, panels, stripes or colours that no reference shows.
+    - If two views disagree (lighting, wear, scale), treat the FIRST view of that item as the authoritative reference for color and finish.
+    
+    CRITICAL CLOTHING & FOOTWEAR TRANSFER MANDATE (STRICT NO-SUBSTITUTION RULE):
+    - YOU MUST DRESS THE ATHLETE IN THE EXACT GARMENTS AND FOOTWEAR PROVIDED IN THE INPUT IMAGES (Input Image 1, Input Image 2, Input Image 3, Input Image 4, Input Image 5, Input Image 6, Input Image 7, Input Image 8).
+    - DO NOT SUBSTITUTE OR ALTER THE CLOTHING WITH DEFAULT TRACKSUITS, GENERIC BRANDED APPAREL, OR UNRELATED SNEAKERS.
+    - FOOTWEAR: Replicate 100% of the footwear in Input Image 1 + Input Image 2 + Input Image 3 + Input Image 4 (exact color, upper mesh/overlays, sole cushioning geometry, branding).
+    - PANTS/BOTTOMS: Replicate 100% of the pants in Input Image 5 + Input Image 6 (exact fabric color, cut, texture, pockets, seams).
+    - TOP/SHIRT: Replicate 100% of the top garment in Input Image 7 + Input Image 8 (exact fabric pattern, tie-dye/print/graphics, neckline, sleeve length, chest logo).
+
+    - CAMERA PERSPECTIVE: Execute the exact camera angle requested in the style directive.
+
+    CRITICAL BACKGROUND & SCENE COMPOSITION DIRECTIVES:
+    - MANDATORY BACKGROUND SCENE: Input Image 9 is the EXACT custom background scene. Composite the athlete directly into the environment and backdrop of Input Image 9.
+    
+    
+
+    SAVED CORRECTIONS (these override anything above that disagrees):
+    - LOGOS AND MARKS — SHOES, TOP AND BOTTOMS ALIKE: a logo, badge, patch, wordmark, stripe or tape appears ONLY where a supplied photograph shows one, at that place and that size. Never move a mark into the frame because the crop cannot see where it really sits, never add one to a surface photographed bare, and never put one brand's mark on another brand's item.
+    - DESIGN DETAILS — PHOTOGRAPHIC EVIDENCE ONLY: every logo, wordmark, badge, stripe, tape, panel, pocket, flap, seam, stitch line, zip, button, drawcord and colour block on a garment comes from a supplied photograph of THAT garment, at the exact position, size and orientation the photograph shows. Do NOT add a detail because this brand, or this kind of garment, usually has one. Do NOT move a detail to a more visible spot, mirror it to the other side, enlarge it, or reinterpret it. A face of the garment that no photograph shows is rendered PLAIN, in the same material and colour as the photographed faces. When in doubt, leave it out.
+    - ANKLE / LEG OPENING — TROUSERS WORN BY THE PERSON AND UPLOADED TROUSERS ALIKE: the bottom of the trouser leg is copied exactly as photographed. An open hem falls straight down over the shoe at its photographed width; it does NOT cinch, taper, gather, bunch, stack or tuck into the collar of the shoe. Where the reference shows an elasticated cuff, a drawcord, a turn-up or stacked fabric, keep exactly that. Never add a jogger-style gathered or elasticated ankle the photograph does not show, and never remove one it does.
+    - LACES: reproduce the lacing from the photographs — eyelet count and spacing, lace width and colour, the threading pattern, and how the lace ends. Where a crossing is unclear in the reference, keep it unclear rather than tidying it into a pattern of your own.
+  
+
+      GARMENT & GEAR DIRECTIVE:
+      - Transfer the uploaded items (Input Image 1, Input Image 2, Input Image 3, Input Image 4, Input Image 5, Input Image 6, Input Image 7, Input Image 8) onto the generated Arabic athlete with photorealistic precision.
+      - Accurately preserve garment silhouettes, textures, colorways, prints, logos, stitching, and fabric structure from source images. MANDATORY FOOTWEAR TRANSFER: The athlete MUST wear the EXACT footwear shown in Input Image 1 + Input Image 2 + Input Image 3 + Input Image 4. Replicate 100% of the footwear design, colorway, upper materials, overlays, branding/emblems, lace style, sole shape, and silhouette from Input Image 1 + Input Image 2 + Input Image 3 + Input Image 4. DO NOT change or replace the sneaker model.
+
+      CAMERA & STYLE DIRECTIVE:
+      - SHOT TYPE: ON THE RETAIL SHELF DISPLAY. Eye-level luxury retail product showcase shot featuring the exact sneakers from Input Image 1 styled on an illuminated store shelf display rack with sleek background lighting.
+
+      OUTPUT: High-contrast commercial sports photography featuring an Arabic athlete wearing the exact provided clothing and footwear.
+    

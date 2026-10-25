@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: EM Tryon V1.4",
+  "description": "EM Try on app for sports wear and focus on footwear",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

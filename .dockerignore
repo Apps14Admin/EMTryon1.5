@@ -1,0 +1,18 @@
+node_modules
+dist
+.git
+.gitignore
+.env
+.env.*
+*.log
+*.md
+modify.py
+replace.py
+replace.txt
+bun.lock
+
+# Local counter + scheduler state; the container starts its own
+data
+
+# Local e2e artifacts
+.e2e

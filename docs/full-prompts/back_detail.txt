@@ -1,0 +1,89 @@
+ANGLE ID: back_detail
+ATTACHED IMAGES: 8
+ASPECT RATIO: 4:5
+IS CLOSE-UP: true
+SCENE SOURCE: plate (plate view: BACK)
+ANGLE EVIDENCE: Input Image 1 + Input Image 4 + Input Image 6 + Input Image 7
+======================================================================
+
+      STUDIO MISSION: Dress the real person shown in Input Image 5 in the exact uploaded apparel and footwear, as a high-end commercial photograph.
+
+      
+    INPUT SOURCE IMAGES:
+    Input Image 1: EXACT FOOTWEAR / SHOES ITEM TO WEAR — the BACK view of this item (camera positioned to show the back). Same single physical item as the other views.
+    Input Image 2: EXACT FOOTWEAR / SHOES ITEM TO WEAR — the LEFT view of this item (camera positioned to show the left). Same single physical item as the other views.
+    Input Image 3: EXACT FOOTWEAR / SHOES ITEM TO WEAR — the RIGHT view of this item (camera positioned to show the right). Same single physical item as the other views.
+    Input Image 4: EXACT PANTS / BOTTOMS GARMENT TO WEAR — the BACK view of this item (camera positioned to show the back). Same single physical item as the other views.
+    Input Image 5: LOCKED SCENE PLATE — ONE photograph containing BOTH the real person to be dressed AND the complete final environment, shot from the angle this render requires. The person in it IS THE SUBJECT: their face, identity, build and skin tone are reproduced exactly and never replaced by another person. The background, fixtures, surfaces and lighting in it ARE THE FINAL SCENE and are reproduced unchanged. Only the garments and footwear worn by this person change.
+    Input Image 6: THE SAME PHOTOGRAPH AS INPUT IMAGE 1, REPEATED DELIBERATELY — the BACK view of the EXACT FOOTWEAR / SHOES ITEM TO WEAR. It shows the exact face of the product this camera angle looks at, and it is the ONLY admissible source for what that face carries: every line of its shape, every mark, every colour and every material on it comes from this photograph. It is evidence for the PRODUCT ONLY — the backdrop, floor and surroundings visible in it are reference-photo context and are NOT part of this shot.
+    Input Image 7: THE SAME PHOTOGRAPH AS INPUT IMAGE 4, REPEATED DELIBERATELY — the BACK view of the EXACT PANTS / BOTTOMS GARMENT TO WEAR. It shows the exact face of the product this camera angle looks at, and it is the ONLY admissible source for what that face carries: every line of its shape, every mark, every colour and every material on it comes from this photograph. It is evidence for the PRODUCT ONLY — the backdrop, floor and surroundings visible in it are reference-photo context and are NOT part of this shot.
+    Input Image 8: THE SAME PHOTOGRAPH AS INPUT IMAGE 5, REPEATED DELIBERATELY — the LOCKED SCENE PLATE again. It is the ONLY admissible source for the floor, the ground surface, the environment, the lighting and the person in this shot. No other photograph contributes a single pixel of background.
+
+    IDENTITY LOCK — HIGHEST PRIORITY, OVERRIDES EVERY OTHER INSTRUCTION:
+    - Input Image 5 is a photograph of a REAL, SPECIFIC PERSON. Treat this task as DRESSING THAT PERSON, not as generating a person who resembles them.
+    
+    - Reproduce with ZERO deviation: facial geometry and proportions, eye shape/color/spacing, eyebrow shape, nose shape and width, mouth and lip shape, jawline, chin, cheekbones, ears, hairline, hair texture/length/color, facial hair, skin tone and undertone, skin texture including moles, freckles, scars and pores, apparent age, body type, height and build.
+    - DO NOT beautify, idealise, slim, muscularise, smooth skin, symmetrise features, whiten teeth, change age, change ethnicity, or make the person more "commercial", "athletic" or "model-like" in any way.
+    - Their face must be recognisably THE SAME INDIVIDUAL to someone who knows them. If a styling instruction would alter their appearance, IGNORE that instruction and preserve the person.
+    - Change ONLY: the garments for which a photograph was supplied, the pose and the camera angle. The background and lighting are fixed by the plate and are not changed. Every other garment stays exactly as worn.
+    
+    PRODUCT SHOT INTERPRETATION (APPLIES TO EVERY GARMENT REFERENCE):
+    - Garment references are typically FLAT-LAY, folded, ghost-mannequin or hanger product photographs: the item is unworn, pressed flat, sleeves splayed, with no body inside and no natural drape.
+    - Read these as FLAT TECHNICAL SPECIFICATIONS OF THE PRODUCT, not as the shape it should have when worn.
+    - COPY EXACTLY from the product shot: color and colorway, fabric type and weave, knit/rib texture, print or pattern and its scale, buttons, plackets, collar type, cuffs, hems, the trouser leg opening — its width, its construction and how it meets the shoe — pockets, seams, trims, and logo/branding position.
+    - RE-DERIVE naturally when worn: drape, folds, creases, stretch across the chest and shoulders, sleeve fall, and how fabric responds to the body's pose and gravity. The leg opening is NOT re-derived: it is copied.
+    - Do NOT reproduce flat-lay artifacts: no board-flat silhouette, no symmetric splayed sleeves, no floating garment, no packaging creases, and never leave the garment looking pasted on.
+    - Do NOT invent design elements that are absent from the product shot (extra stripes, logos, pockets, contrast panels). If a detail is not visible in the reference, keep that area plain and consistent with the visible material.
+    
+    MULTI-VIEW REFERENCE MANDATE (CRITICAL — READ BEFORE RENDERING):
+    - FOOTWEAR: Input Image 1 + Input Image 2 + Input Image 3 are MULTIPLE PHOTOGRAPHS OF ONE SINGLE PHYSICAL ITEM captured from different angles (e.g. side, top, sole, back, close-up). They are NOT separate products and MUST NOT be rendered as different garments.
+    - Merge every view of an item into ONE coherent three-dimensional understanding of that product: its true silhouette, proportions, colorway, materials, panelling, stitching, branding placement, and sole/hem geometry.
+    - When the athlete is rendered from an angle, reproduce the item AS IT ACTUALLY APPEARS from that angle according to whichever reference view shows it.
+    - For any angle not covered by a reference view, infer ONLY its geometry, continuing the shapes, materials and colours the supplied views establish. Never invent designs, logos, text, patterns, pockets, panels, stripes or colours that no reference shows.
+    - If two views disagree (lighting, wear, scale), treat the FIRST view of that item as the authoritative reference for color and finish.
+    
+    CRITICAL CLOTHING & FOOTWEAR TRANSFER MANDATE (STRICT NO-SUBSTITUTION RULE):
+    - YOU MUST DRESS THE ATHLETE IN THE EXACT GARMENTS AND FOOTWEAR PROVIDED IN THE INPUT IMAGES (Input Image 1, Input Image 2, Input Image 3, Input Image 4, Input Image 6, Input Image 7).
+    - DO NOT SUBSTITUTE OR ALTER THE CLOTHING WITH DEFAULT TRACKSUITS, GENERIC BRANDED APPAREL, OR UNRELATED SNEAKERS.
+    - FOOTWEAR: Replicate 100% of the footwear in Input Image 1 + Input Image 2 + Input Image 3 (exact color, upper mesh/overlays, sole cushioning geometry, branding).
+    - PANTS/BOTTOMS: Replicate 100% of the pants in Input Image 4 (exact fabric color, cut, texture, pockets, seams).
+    
+
+    REPLACED GARMENTS — NOTHING CARRIES OVER FROM WHAT THE PERSON WAS WEARING:
+    - FOOTWEAR / SHOES: the footwear / shoes the person wears in Input Image 5 is REMOVED entirely. No logo, mark, colour, panel, pocket, stitching or shape from it carries into the output. The ONLY source for this slot is Input Image 1 + Input Image 2 + Input Image 3.
+    - PANTS / BOTTOMS: the pants / bottoms the person wears in Input Image 5 is REMOVED entirely. No logo, mark, colour, panel, pocket, stitching or shape from it carries into the output. The ONLY source for this slot is Input Image 4.
+    
+    FACE OF EACH GARMENT THIS CAMERA SEES (BACK SHOT):
+    - FOOTWEAR / SHOES: the BACK of this item is photographed in Input Image 1 + Input Image 6. What that face carries is EXACTLY what those photographs show and nothing more. A logo, wordmark, badge or mark that appears only in another photograph of this item (Input Image 2 + Input Image 3) belongs to the face THAT photograph shows and does NOT appear on the back. If the back is photographed bare, it is rendered bare.
+    - PANTS / BOTTOMS: the BACK of this item is photographed in Input Image 4 + Input Image 7. What that face carries is EXACTLY what those photographs show and nothing more. If the back is photographed bare, it is rendered bare.
+    
+    GARMENTS NOT SUPPLIED — KEEP EXACTLY AS WORN (STRICT):
+    - TOP / SHIRT / JACKET: no photograph was supplied for this item. The person keeps the top / shirt / jacket they are ALREADY WEARING in Input Image 5 — the same garment, colour, fabric, fit, length and hem, reproduced exactly as photographed.
+    - Do NOT generate, replace, restyle, recolour, tidy or "improve" any of these items. They are not part of the try-on; they are fixed.
+    - Only the items listed in the transfer mandate change. Everything else the person wears stays exactly as it is in Input Image 5.
+    
+    - CAMERA PERSPECTIVE: Execute the exact camera angle requested in the style directive.
+
+    CRITICAL BACKGROUND & SCENE COMPOSITION DIRECTIVES:
+    - LOCKED SCENE: Input Image 5 already shows the person standing in the final environment. Reproduce that environment — the same room, fixtures, surfaces, colours and lighting — exactly as photographed. Do NOT invent a different scene and do NOT place a different person in it.
+    - CLOSE-UP BACKGROUND SOURCE (OVERRIDES EVERYTHING THE PRODUCT PHOTOGRAPHS SHOW AROUND THE PRODUCT): the ground, the floor and every visible piece of environment in this close-up come ONLY from Input Image 5 — the same surface, material, colour, depth of field and lighting, simply seen from close up. The product reference photographs carry their own surroundings (studio sweeps, white cut-out backdrops, shop floors, packaging); those surroundings are reference-photo context, NOT part of this shot, and MUST NOT appear in the output — not as a backdrop, not as floor texture, not as a colour cast.
+    
+
+    SAVED CORRECTIONS (these override anything above that disagrees):
+    - LOGOS AND MARKS — SHOES, TOP AND BOTTOMS ALIKE: a logo, badge, patch, wordmark, stripe or tape appears ONLY where a supplied photograph shows one, at that place and that size. Never move a mark into the frame because the crop cannot see where it really sits, never add one to a surface photographed bare, and never put one brand's mark on another brand's item.
+    - DESIGN DETAILS — PHOTOGRAPHIC EVIDENCE ONLY: every logo, wordmark, badge, stripe, tape, panel, pocket, flap, seam, stitch line, zip, button, drawcord and colour block on a garment comes from a supplied photograph of THAT garment, at the exact position, size and orientation the photograph shows. Do NOT add a detail because this brand, or this kind of garment, usually has one. Do NOT move a detail to a more visible spot, mirror it to the other side, enlarge it, or reinterpret it. A face of the garment that no photograph shows is rendered PLAIN, in the same material and colour as the photographed faces. When in doubt, leave it out.
+    - ANKLE / LEG OPENING — TROUSERS WORN BY THE PERSON AND UPLOADED TROUSERS ALIKE: the bottom of the trouser leg is copied exactly as photographed. An open hem falls straight down over the shoe at its photographed width; it does NOT cinch, taper, gather, bunch, stack or tuck into the collar of the shoe. Where the reference shows an elasticated cuff, a drawcord, a turn-up or stacked fabric, keep exactly that. Never add a jogger-style gathered or elasticated ankle the photograph does not show, and never remove one it does.
+    - LACES: reproduce the lacing from the photographs — eyelet count and spacing, lace width and colour, the threading pattern, and how the lace ends. Where a crossing is unclear in the reference, keep it unclear rather than tidying it into a pattern of your own.
+    - CLOSE-UP FRAMING: the top edge of the picture sits a hand's width — about five fingers — BELOW the knee. NO part of the knee is in frame. The footwear is the subject and fills the lower half of the picture; the leg above it is a supporting strip. The trouser hem meets the shoe exactly as photographed — no cuff added.
+  
+
+      EXECUTION:
+      1. Dress the person in Input Image 5 in the EXACT uploaded apparel items (Input Image 1, Input Image 2, Input Image 3, Input Image 4, Input Image 6, Input Image 7); every garment without a photograph stays exactly as they wear it.
+      2. PRESERVE that person's face, identity, body geometry, skin tone and apparent age EXACTLY as shown in Input Image 5. This overrides all styling directives.
+      3. Ensure high-precision rendering: accurately replicate garment weave, prints, logos, fabric drape, and footwear details from source images.
+      4. Keep the person inside the environment of Input Image 5 exactly as photographed, with natural ground contact and shadows for the new footwear.
+      5. STYLE & CAMERA DIRECTIVE: SHOT TYPE: 180-DEGREE REAR SNEAKER CLOSE-UP. Low ground-level macro shot taken from directly behind the athlete facing away. Focus strictly on the rear heels of the EXACT sneakers from Input Image 1.
+      6. FINAL CHECK before returning: for each garment, every logo, pocket, stripe, panel, seam and mark visible in the output must be visible in a supplied photograph of THAT garment at that same position — anything that is not, comes off. Nothing from the clothing the person originally wore in Input Image 5 may remain on a replaced garment.
+
+      OUTPUT: A crisp, professional commercial photograph of THE SAME PERSON from Input Image 5, wearing the exact uploaded items and otherwise exactly what they wear in Input Image 5.
+    

@@ -1,0 +1,53 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+# Deploy-time env files (gcloud run deploy --env-vars-file) hold the keys too
+env.yaml
+*.env.yaml
+# Service account keys and other credentials
+*-key.json
+service-account*.json
+credentials*.json
+application_default_credentials.json
+*.pem
+*.p12
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local scheduler state, counter and Library (production keeps these in Cloud Storage/Firestore)
+data/
+
+# One-off editing scripts, already applied
+modify.py
+replace.py
+replace.txt
+
+# Editor backup files
+*.bak
+
+# Local e2e artifacts (renders, batches)
+.e2e/

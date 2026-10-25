@@ -1,0 +1,56 @@
+// ===============================================================
+// Assumed Data Model
+// ===============================================================
+//
+// Collection: usage
+// Document ID: {userId}_{yearMonth} (e.g., "user123_2026-03")
+// Fields:
+//   - userId: string (required) - The UID of the user
+//   - month: string (required) - The month in YYYY-MM format
+//   - count: number (required) - Total images generated in this month
+//   - lastUpdated: timestamp (required) - Last update time
+//
+// ===============================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidUsageRecord(data) {
+      return data.keys().hasAll(['userId', 'month', 'count', 'lastUpdated']) &&
+             data.keys().hasOnly(['userId', 'month', 'count', 'lastUpdated']) &&
+             data.userId is string &&
+             data.month is string &&
+             data.month.matches("^\\d{4}-\\d{2}$") &&
+             data.count is number &&
+             data.count >= 0 &&
+             data.lastUpdated is timestamp;
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /usage/{usageId} {
+      // Temporarily allow public read/write to the usage collection
+      // This is to support the app without a sign-in requirement
+      allow read, write: if true;
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

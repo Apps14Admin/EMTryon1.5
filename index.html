@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EM SPORT // High-Performance AI Try-On Studio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              studio: {
+                blue: '#000000',
+                dark: '#0a0a0a',
+                light: '#f8f9fa',
+                volt: '#FFD700',
+                yellow: '#FFD700',
+                gold: '#FACC15',
+                cyan: '#00F0FF',
+                charcoal: '#181818'
+              }
+            },
+            fontFamily: {
+              serif: ['"Oswald"', 'sans-serif'],
+              sans: ['"Inter"', 'sans-serif'],
+              impact: ['"Oswald"', 'sans-serif'],
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'shimmer': 'shimmer 2.5s infinite linear',
+              'bounce-subtle': 'bounceSubtle 2s infinite ease-in-out',
+            },
+            keyframes: {
+              shimmer: {
+                '0%': { backgroundPosition: '-200% 0' },
+                '100%': { backgroundPosition: '200% 0' }
+              },
+              bounceSubtle: {
+                '0%, 100%': { transform: 'translateY(-3%)' },
+                '50%': { transform: 'translateY(0)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #f8f9fa;
+        color: #111827;
+        overflow-x: hidden;
+      }
+      /* Clean subtle background grid */
+      .bg-grid-pattern {
+        background-size: 32px 32px;
+        background-image: 
+          linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+      }
+      /* Clean modern scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+
+
+    /* ══════════════════════════════════════════════════════════════════════
+       EM SPORT DARK THEME — role tokens, then one mapping of the utilities
+       this app already uses onto those roles. Set data-theme="dark" on <html>.
+
+       Specificity does the work (0,2,0 beats 0,1,0), so no !important. Light
+       mode is untouched: every rule below is scoped to the dark attribute.
+       ══════════════════════════════════════════════════════════════════════ */
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --em-page: #101110;      --em-input: #151716;    --em-card: #1B1D1B;
+      --em-raised: #232624;  --em-overlay: #0A0B0A;
+      --em-border-subtle: #272A27; --em-border: #333733; --em-border-strong: #434841;
+      --em-ink: #ECEEE9;   --em-ink-2: #ABAFA6;
+      --em-ink-3: #7E837A;   --em-ink-4: #5C6058;
+      --em-accent: #E3C247;  --em-accent-strong: #F0D264;
+      --em-accent-dim: #A98F2C; --em-accent-ink: #15150E;
+    }
+
+    html[data-theme="dark"] body { background-color: var(--em-page); color: var(--em-ink-2); }
+
+    /* Chrome the utilities cannot reach. */
+    html[data-theme="dark"] ::-webkit-scrollbar-track { background: var(--em-input); }
+    html[data-theme="dark"] ::-webkit-scrollbar-thumb { background: var(--em-border-strong); border-radius: 4px; }
+    html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: var(--em-ink-4); }
+    html[data-theme="dark"] .bg-grid-pattern {
+      background-image:
+        linear-gradient(to right, rgba(236,238,233,.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(236,238,233,.035) 1px, transparent 1px);
+    }
+
+    /* Form controls are browser-painted; they need saying outright. Inputs sit
+       on --em-input so they read as wells sunk below the card around them. */
+    html[data-theme="dark"] input, html[data-theme="dark"] textarea, html[data-theme="dark"] select {
+      background-color: var(--em-input); color: var(--em-ink); border-color: var(--em-border);
+    }
+    html[data-theme="dark"] input:focus, html[data-theme="dark"] textarea:focus,
+    html[data-theme="dark"] select:focus { border-color: var(--em-accent-dim); }
+    html[data-theme="dark"] ::placeholder { color: var(--em-ink-4); }
+    html[data-theme="dark"] option { background-color: var(--em-card); color: var(--em-ink); }
+    html[data-theme="dark"] :disabled { color: var(--em-ink-4); }
+    html[data-theme="dark"] ::selection { background: rgba(227,194,71,.28); color: var(--em-ink); }
+    html[data-theme="dark"] :focus-visible { outline-color: var(--em-accent); }
+
+    /* On a dark ground a light shadow reads as haze. Deepen instead. */
+    html[data-theme="dark"] .shadow-2xs, html[data-theme="dark"] .shadow-xs,
+    html[data-theme="dark"] .shadow-sm, html[data-theme="dark"] .shadow,
+    html[data-theme="dark"] .shadow-lg, html[data-theme="dark"] .shadow-xl,
+    html[data-theme="dark"] .shadow-2xl { --tw-shadow-color: rgba(0,0,0,.55); }
+
+    /* Photographs and renders are content, not chrome: never re-tint them.
+       A hair of brightness comes off so they sit on the dark ground. */
+    html[data-theme="dark"] img:not([src^="data:image/svg"]) { filter: brightness(.96); }
+
+    html[data-theme="dark"] .bg-white { background-color: #1B1D1B; }
+    html[data-theme="dark"] .bg-white\/95 { background-color: #1B1D1B; }
+    html[data-theme="dark"] .bg-white\/90 { background-color: #1B1D1B; }
+    html[data-theme="dark"] .bg-white\/70 { background-color: #1B1D1B; }
+    html[data-theme="dark"] .bg-white\/60 { background-color: #1B1D1B; }
+    html[data-theme="dark"] .bg-gray-50 { background-color: #151716; }
+    html[data-theme="dark"] .bg-gray-50\/80 { background-color: #151716; }
+    html[data-theme="dark"] .bg-gray-50\/50 { background-color: #151716; }
+    html[data-theme="dark"] .bg-gray-100 { background-color: #232624; }
+    html[data-theme="dark"] .bg-gray-100\/80 { background-color: #232624; }
+    html[data-theme="dark"] .bg-gray-200 { background-color: #232624; }
+    html[data-theme="dark"] .bg-gray-200\/60 { background-color: #232624; }
+    html[data-theme="dark"] .bg-gray-300 { background-color: #434841; }
+    html[data-theme="dark"] .bg-gray-400 { background-color: #5C6058; }
+    html[data-theme="dark"] .bg-gray-700 { background-color: #232624; }
+    html[data-theme="dark"] .bg-gray-800 { background-color: #1B1D1B; }
+    html[data-theme="dark"] .bg-gray-900 { background-color: #101110; }
+    html[data-theme="dark"] .bg-gray-900\/90 { background-color: #101110; }
+    html[data-theme="dark"] .bg-gray-900\/80 { background-color: #101110; }
+    html[data-theme="dark"] .bg-gray-950 { background-color: #0A0B0A; }
+    html[data-theme="dark"] .bg-black { background-color: #0A0B0A; }
+    html[data-theme="dark"] .bg-black\/85 { background-color: rgba(6,7,6,.88); }
+    html[data-theme="dark"] .bg-black\/70 { background-color: rgba(6,7,6,.76); }
+    html[data-theme="dark"] .bg-black\/60 { background-color: rgba(6,7,6,.66); }
+    html[data-theme="dark"] .bg-black\/50 { background-color: rgba(6,7,6,.56); }
+    html[data-theme="dark"] .bg-black\/40 { background-color: rgba(6,7,6,.46); }
+    html[data-theme="dark"] .bg-black\/20 { background-color: rgba(6,7,6,.28); }
+    html[data-theme="dark"] .bg-yellow-400 { background-color: #E3C247; }
+    html[data-theme="dark"] .bg-yellow-400\/95 { background-color: #E3C247; }
+    html[data-theme="dark"] .bg-yellow-300 { background-color: #F0D264; }
+    html[data-theme="dark"] .bg-yellow-500 { background-color: #A98F2C; }
+    html[data-theme="dark"] .bg-yellow-400\/70 { background-color: rgba(227,194,71,.34); }
+    html[data-theme="dark"] .bg-yellow-400\/60 { background-color: rgba(227,194,71,.28); }
+    html[data-theme="dark"] .bg-yellow-400\/40 { background-color: rgba(227,194,71,.20); }
+    html[data-theme="dark"] .bg-yellow-400\/30 { background-color: rgba(227,194,71,.16); }
+    html[data-theme="dark"] .bg-yellow-400\/20 { background-color: rgba(227,194,71,.12); }
+    html[data-theme="dark"] .bg-yellow-400\/15 { background-color: rgba(227,194,71,.10); }
+    html[data-theme="dark"] .bg-yellow-200 { background-color: rgba(227,194,71,.20); }
+    html[data-theme="dark"] .bg-yellow-100 { background-color: rgba(227,194,71,.13); }
+    html[data-theme="dark"] .bg-yellow-100\/70 { background-color: rgba(227,194,71,.11); }
+    html[data-theme="dark"] .bg-yellow-50 { background-color: rgba(227,194,71,.08); }
+    html[data-theme="dark"] .bg-yellow-50\/60 { background-color: rgba(227,194,71,.07); }
+    html[data-theme="dark"] .bg-yellow-50\/50 { background-color: rgba(227,194,71,.06); }
+    html[data-theme="dark"] .bg-yellow-50\/40 { background-color: rgba(227,194,71,.05); }
+    html[data-theme="dark"] .bg-emerald-50 { background-color: #15241A; }
+    html[data-theme="dark"] .bg-emerald-50\/70 { background-color: #15241A; }
+    html[data-theme="dark"] .bg-emerald-100 { background-color: #15241A; }
+    html[data-theme="dark"] .bg-green-50 { background-color: #15241A; }
+    html[data-theme="dark"] .bg-green-100 { background-color: #15241A; }
+    html[data-theme="dark"] .bg-emerald-500 { background-color: #3E8F5C; }
+    html[data-theme="dark"] .bg-emerald-600 { background-color: #357A50; }
+    html[data-theme="dark"] .bg-amber-50 { background-color: #272013; }
+    html[data-theme="dark"] .bg-amber-50\/50 { background-color: #272013; }
+    html[data-theme="dark"] .bg-amber-100 { background-color: #272013; }
+    html[data-theme="dark"] .bg-amber-100\/80 { background-color: #272013; }
+    html[data-theme="dark"] .bg-amber-100\/50 { background-color: #272013; }
+    html[data-theme="dark"] .bg-amber-100\/40 { background-color: #272013; }
+    html[data-theme="dark"] .bg-amber-200\/80 { background-color: rgba(220,178,100,.18); }
+    html[data-theme="dark"] .bg-amber-500 { background-color: #B98B2E; }
+    html[data-theme="dark"] .bg-amber-600 { background-color: #A0771F; }
+    html[data-theme="dark"] .bg-amber-700 { background-color: #87641A; }
+    html[data-theme="dark"] .bg-red-50 { background-color: #271615; }
+    html[data-theme="dark"] .bg-red-100 { background-color: #271615; }
+    html[data-theme="dark"] .bg-red-500 { background-color: #B85450; }
+    html[data-theme="dark"] .bg-red-600 { background-color: #A24743; }
+    html[data-theme="dark"] .bg-blue-50 { background-color: #161F27; }
+    html[data-theme="dark"] .bg-blue-600 { background-color: #3E6E9E; }
+    html[data-theme="dark"] .text-black { color: #ECEEE9; }
+    html[data-theme="dark"] .text-gray-950 { color: #ECEEE9; }
+    html[data-theme="dark"] .text-gray-900 { color: #ECEEE9; }
+    html[data-theme="dark"] .text-white { color: #ECEEE9; }
+    html[data-theme="dark"] .text-gray-200 { color: #ECEEE9; }
+    html[data-theme="dark"] .text-gray-800 { color: #ABAFA6; }
+    html[data-theme="dark"] .text-gray-700 { color: #ABAFA6; }
+    html[data-theme="dark"] .text-gray-300 { color: #ABAFA6; }
+    html[data-theme="dark"] .text-gray-600 { color: #7E837A; }
+    html[data-theme="dark"] .text-gray-500 { color: #7E837A; }
+    html[data-theme="dark"] .text-gray-400 { color: #5C6058; }
+    html[data-theme="dark"] .text-yellow-950 { color: #F0D264; }
+    html[data-theme="dark"] .text-yellow-900 { color: #F0D264; }
+    html[data-theme="dark"] .text-yellow-800 { color: #F0D264; }
+    html[data-theme="dark"] .text-yellow-700 { color: #E3C247; }
+    html[data-theme="dark"] .text-yellow-600 { color: #E3C247; }
+    html[data-theme="dark"] .text-yellow-500 { color: #E3C247; }
+    html[data-theme="dark"] .text-yellow-400 { color: #E3C247; }
+    html[data-theme="dark"] .text-emerald-900 { color: #7FC894; }
+    html[data-theme="dark"] .text-emerald-700 { color: #7FC894; }
+    html[data-theme="dark"] .text-emerald-600 { color: #7FC894; }
+    html[data-theme="dark"] .text-emerald-400 { color: #7FC894; }
+    html[data-theme="dark"] .text-green-800 { color: #7FC894; }
+    html[data-theme="dark"] .text-amber-900 { color: #DCB264; }
+    html[data-theme="dark"] .text-amber-800 { color: #DCB264; }
+    html[data-theme="dark"] .text-amber-800\/90 { color: #DCB264; }
+    html[data-theme="dark"] .text-amber-700 { color: #DCB264; }
+    html[data-theme="dark"] .text-amber-600 { color: #DCB264; }
+    html[data-theme="dark"] .text-amber-500 { color: #DCB264; }
+    html[data-theme="dark"] .text-red-900 { color: #E98C84; }
+    html[data-theme="dark"] .text-red-800 { color: #E98C84; }
+    html[data-theme="dark"] .text-red-700 { color: #E98C84; }
+    html[data-theme="dark"] .text-red-600 { color: #E98C84; }
+    html[data-theme="dark"] .text-red-500 { color: #E98C84; }
+    html[data-theme="dark"] .text-blue-700 { color: #8CB4DC; }
+    html[data-theme="dark"] .text-blue-600 { color: #8CB4DC; }
+    html[data-theme="dark"] .border-gray-100 { border-color: #272A27; }
+    html[data-theme="dark"] .border-gray-200 { border-color: #333733; }
+    html[data-theme="dark"] .border-gray-200\/90 { border-color: #333733; }
+    html[data-theme="dark"] .border-gray-200\/80 { border-color: #333733; }
+    html[data-theme="dark"] .border-gray-200\/70 { border-color: #333733; }
+    html[data-theme="dark"] .border-gray-200\/60 { border-color: #333733; }
+    html[data-theme="dark"] .border-gray-300 { border-color: #434841; }
+    html[data-theme="dark"] .border-gray-700 { border-color: #434841; }
+    html[data-theme="dark"] .border-gray-800 { border-color: #333733; }
+    html[data-theme="dark"] .border-white\/30 { border-color: rgba(236,238,233,.20); }
+    html[data-theme="dark"] .border-white\/10 { border-color: rgba(236,238,233,.09); }
+    html[data-theme="dark"] .border-black\/20 { border-color: rgba(6,7,6,.5); }
+    html[data-theme="dark"] .border-yellow-500 { border-color: #A98F2C; }
+    html[data-theme="dark"] .border-yellow-500\/80 { border-color: rgba(169,143,44,.8); }
+    html[data-theme="dark"] .border-yellow-400 { border-color: #E3C247; }
+    html[data-theme="dark"] .border-yellow-300 { border-color: #A98F2C; }
+    html[data-theme="dark"] .border-yellow-200 { border-color: rgba(227,194,71,.30); }
+    html[data-theme="dark"] .border-yellow-400\/70 { border-color: rgba(227,194,71,.52); }
+    html[data-theme="dark"] .border-yellow-400\/60 { border-color: rgba(227,194,71,.44); }
+    html[data-theme="dark"] .border-yellow-400\/50 { border-color: rgba(227,194,71,.38); }
+    html[data-theme="dark"] .border-yellow-400\/40 { border-color: rgba(227,194,71,.30); }
+    html[data-theme="dark"] .border-yellow-400\/30 { border-color: rgba(227,194,71,.24); }
+    html[data-theme="dark"] .border-emerald-200 { border-color: #2E4A37; }
+    html[data-theme="dark"] .border-emerald-300 { border-color: #2E4A37; }
+    html[data-theme="dark"] .border-emerald-500 { border-color: #3E8F5C; }
+    html[data-theme="dark"] .border-emerald-600 { border-color: #357A50; }
+    html[data-theme="dark"] .border-green-300 { border-color: #2E4A37; }
+    html[data-theme="dark"] .border-green-500 { border-color: #3E8F5C; }
+    html[data-theme="dark"] .border-amber-100 { border-color: #4A3C20; }
+    html[data-theme="dark"] .border-amber-200 { border-color: #4A3C20; }
+    html[data-theme="dark"] .border-amber-200\/80 { border-color: #4A3C20; }
+    html[data-theme="dark"] .border-amber-200\/70 { border-color: #4A3C20; }
+    html[data-theme="dark"] .border-amber-300 { border-color: #4A3C20; }
+    html[data-theme="dark"] .border-amber-500 { border-color: #B98B2E; }
+    html[data-theme="dark"] .border-red-100 { border-color: #4A2523; }
+    html[data-theme="dark"] .border-red-200 { border-color: #4A2523; }
+    html[data-theme="dark"] .border-red-300 { border-color: #4A2523; }
+    html[data-theme="dark"] .border-blue-100 { border-color: #2A3B4A; }
+    html[data-theme="dark"] .border-blue-400 { border-color: #3E6E9E; }
+    html[data-theme="dark"] .ring-yellow-500 { --tw-ring-color: #A98F2C; }
+    html[data-theme="dark"] .ring-yellow-400 { --tw-ring-color: #E3C247; }
+    html[data-theme="dark"] .ring-yellow-300 { --tw-ring-color: #A98F2C; }
+    html[data-theme="dark"] .ring-yellow-400\/80 { --tw-ring-color: rgba(227,194,71,.55); }
+    html[data-theme="dark"] .ring-yellow-400\/60 { --tw-ring-color: rgba(227,194,71,.44); }
+    html[data-theme="dark"] .ring-yellow-400\/50 { --tw-ring-color: rgba(227,194,71,.38); }
+    html[data-theme="dark"] .ring-yellow-400\/30 { --tw-ring-color: rgba(227,194,71,.26); }
+    html[data-theme="dark"] .ring-yellow-400\/20 { --tw-ring-color: rgba(227,194,71,.18); }
+    html[data-theme="dark"] .ring-emerald-500 { --tw-ring-color: #3E8F5C; }
+    html[data-theme="dark"] .ring-green-400\/40 { --tw-ring-color: rgba(62,143,92,.45); }
+    html[data-theme="dark"] .divide-gray-100 > :not([hidden]) ~ :not([hidden]) { border-color: #272A27; }
+    html[data-theme="dark"] .from-yellow-400 { --tw-gradient-from: #E3C247; --tw-gradient-to: #E3C247; }
+    html[data-theme="dark"] .from-yellow-300 { --tw-gradient-from: #F0D264; --tw-gradient-to: #F0D264; }
+    html[data-theme="dark"] .from-yellow-100 { --tw-gradient-from: rgba(227,194,71,.13); --tw-gradient-to: rgba(227,194,71,.13); }
+    html[data-theme="dark"] .from-yellow-50 { --tw-gradient-from: rgba(227,194,71,.08); --tw-gradient-to: rgba(227,194,71,.08); }
+    html[data-theme="dark"] .to-amber-500 { --tw-gradient-from: #B98B2E; --tw-gradient-to: #B98B2E; }
+    html[data-theme="dark"] .to-amber-400 { --tw-gradient-from: #A98F2C; --tw-gradient-to: #A98F2C; }
+    html[data-theme="dark"] .to-amber-100 { --tw-gradient-from: #272013; --tw-gradient-to: #272013; }
+    html[data-theme="dark"] .to-amber-50 { --tw-gradient-from: #272013; --tw-gradient-to: #272013; }
+    html[data-theme="dark"] .via-white { --tw-gradient-via: #1B1D1B; }
+    html[data-theme="dark"] .via-white\/70 { --tw-gradient-via: #1B1D1B; }
+
+    /* ══════════════════════════════════════════════════════════════════════
+       RTL — mirrors the layout when <html dir="rtl">. Flex and grid mirror on
+       their own; what needs saying is text alignment, the directional
+       utilities, and values that must stay left-to-right inside Arabic.
+       ══════════════════════════════════════════════════════════════════════ */
+    html[dir="rtl"] body { direction: rtl; }
+    html[dir="rtl"] .text-left { text-align: right; }
+    html[dir="rtl"] .text-right { text-align: left; }
+    html[dir="rtl"] input, html[dir="rtl"] textarea, html[dir="rtl"] select { text-align: right; }
+    html[dir="rtl"] .rtl-flip { transform: scaleX(-1); }
+    /* Product names, ids, filenames, model ids, measurements: values, not copy. */
+    html[dir="rtl"] .ltr-value {
+      direction: ltr; unicode-bidi: embed; text-align: left; display: inline-block;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
